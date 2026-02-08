@@ -92,13 +92,13 @@ if ($Config{osname} eq 'darwin' && !(@RLLIB || @RLINC)
     }
 }
 
-if ($Config{osname} eq 'os2') {
-    # Check ftp://ftp.math.ohio-state.edu/pub/users/ilya/os2/
-    push(@libs, '-lreadline_import');
-    push(@defs, '-DOS2_USEDLL');
-} else {
-    push(@libs, '-lreadline');
-}
+#if ($Config{osname} eq 'os2') {
+#    # Check ftp://ftp.math.ohio-state.edu/pub/users/ilya/os2/
+#    push(@libs, '-lreadline_import');
+#    push(@defs, '-DOS2_USEDLL');
+#} else {
+#    push(@libs, '-lreadline');
+#}
 
 {
     my $frlver = 'rlver';
