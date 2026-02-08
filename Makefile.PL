@@ -156,7 +156,7 @@ push(@libs, '-lcrypt') if ($Config{osname} =~ /freebsd/i);
 #push(@lddflags, '-static') if ($Config{osname} =~ /cygwin/i);
 
 # Check whether xmalloc has been renamed to _rl_malloc (Gentoo Linux)
-if (my $extra_defs = guess_malloc_names("@RLINC", "@RLLIB", "@defs", "@lddflags", "@libs")) {
+if(my $extra_defs=""){
     push(@defs, $extra_defs);
 }
 
@@ -379,3 +379,4 @@ EOM
     exit $err;
 }
 # End of Makefile.PL
+
